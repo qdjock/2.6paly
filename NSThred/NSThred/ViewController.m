@@ -14,10 +14,10 @@
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     
     
     UIView *vi =[[UIView alloc]initWithFrame:CGRectMake(0,0, 200, 100)];
@@ -60,7 +60,7 @@
 }
 
 
-
+#pragma mark -  000
 -(void)thread01:(NSThread *)thred{
     
     int a =1;
@@ -71,10 +71,14 @@
     
     [thred  cancel];
 //    [NSThread  exit];
-    NSLog(@"线程退出");
+    @synchronized(self) {
+        
+        NSLog(@"线程退出");
+    }
 
  
 }
+#pragma mark - kkkkkkk
 -(void)theThread02{
     NSLog(@"222-----%@",[NSThread currentThread]);
    UIView *vi = [self.view  viewWithTag:3];
