@@ -45,7 +45,7 @@
     
     
     
-    
+    NSLog(@"dsdfdsfsdf");
 //    让主线程睡眠2秒后执行
 //    [NSThread  sleepForTimeInterval:2];
     
